@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="boder:2px solid #000">
+    <h1>This is body</h1>
+    <p>Here  is where you put stuff that should be in the the body</p>
+
+    {% for question in questions %}
+    {% include 'personal/snippets/body_snippet.html' with value=question %}
+    {% endfor %}
+</div>
+{% endblock content  %}
